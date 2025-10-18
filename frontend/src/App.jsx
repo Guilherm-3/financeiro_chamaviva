@@ -5,8 +5,14 @@ import axios from 'axios';
 import './App.css';
 import FormularioLancamento from './components/FormularioLancamento';
 
+//  LOCALHOST
+// const api = axios.create({
+//   baseURL: 'http://localhost:3001',
+// });
+
+// Para isto:
 const api = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: '/api',
 });
 
 function App() {
