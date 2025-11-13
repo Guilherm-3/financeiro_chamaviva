@@ -59,6 +59,11 @@
   color: white;
 }
 
+.formulario-botoes button[type="cancel"] {
+  background-color: #ca0c0c;
+  color: white;
+}
+
 .formulario-botoes button[type="button"] {
   background-color: #6c757d;
   color: white;

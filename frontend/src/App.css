@@ -77,13 +77,41 @@ h1, h2 {
 .valor-entrada {
   color: #28a745; /* Verde */
   font-weight: bold;
+  text-align: end;
 }
 
 .valor-saida {
   color: #dc3545; /* Vermelho */
   font-weight: bold;
+  text-align: end;
 }
 
+.valor-entrada-total {
+  background-color: #28a745;
+  color: #F5F5F5;
+  border-radius: 20px;
+  padding: 2px;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.valor-saida-total {
+  background-color: #dc3545;
+  color: #F5F5F5;
+  border-radius: 20px;
+  padding: 2px;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.valor-total {
+  background-color: #2b31fb;
+  color: #F5F5F5;
+  border-radius: 20px;
+  padding: 2px;
+  text-align: end;
+  padding-right: 10px;
+}
 
 /**/
 
@@ -121,4 +149,21 @@ h1, h2 {
 
 .botao-apagar:hover {
   background-color: #c82333;
+}
+
+#pesquisa {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 2px 5px 2px 4px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.col-12 {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  justify-content: flex-end;
 }

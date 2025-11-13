@@ -4,8 +4,11 @@ const db = require('../config/db'); // Importando nosso pool de conexões
 
 // Função para LISTAR todos os lançamentos
 exports.listarLancamentos = async (req, res) => {
+  const { dataInicial, dataFinal } = req.body; 
+  
   try {
-    const [lancamentos] = await db.query('SELECT * FROM lancamentos WHERE IFNULL(status, " ") <> "EXCLUIDO" ORDER BY data DESC');
+    const sql = 'SELECT * FROM lancamentos WHERE IFNULL(status, " ") <> "EXCLUIDO" AND data BETWEEN ? AND ? ORDER BY data DESC';
+    const [lancamentos] = await db.query(sql, [dataInicial, dataFinal]);
     res.status(200).json(lancamentos);
   } catch (error) {
     console.error('Erro ao listar lançamentos:', error);

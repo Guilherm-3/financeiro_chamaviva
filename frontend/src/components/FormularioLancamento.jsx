@@ -28,7 +28,8 @@ function FormularioLancamento({ api, aoSubmeter, aoFechar }) {
       const response = await api.post('/lancamentos', novoLancamento);
 
       // Adiciona o novo lançamento (que vem da resposta da API) à lista no componente App
-      aoSubmeter({ ...novoLancamento, id: response.data.id });
+      // aoSubmeter({ ...novoLancamento, id: response.data.id });
+      aoSubmeter(window.location.reload());
 
       // Limpa os campos do formulário após o envio
       setDescricao('');
